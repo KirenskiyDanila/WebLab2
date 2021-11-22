@@ -1,0 +1,14 @@
+{
+	"content": [
+		{
+		"photoURL": "kofe.jpg",
+		"name": "Кофемолка MOLKAKOFE",
+		"price": "999 рублей"
+		},
+		{
+		"photoURL": "wash.jpg",
+		"name": "Стиральная машина WASH",
+		"price": "11999 рублей"
+		}
+	]
+}
