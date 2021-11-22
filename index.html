@@ -83,7 +83,7 @@
             <div><h1>Регистрация</h1></div>
             <div><a href="#login-window" class="change-window">Вход</a></div>
         </div>
-        <form action="#" class = "top-row">
+        <form action="#" class = "top-row" id="registration-form">
             <div class="field-wrap">
                 <input type="name" placeholder="Введите ваше имя..." required autocomplete="on" pattern="[А-ЯЁ][а-яё]+$" id="RegistrationName"/>
             </div>
@@ -111,7 +111,15 @@
                     <span class="checkbox-google-switch"></span>
                 </label>
                 Согласие на обработку персональных данных
-              <button type="submit" id="button" class="button button-block">Зарегистрироваться</button>
+            <script src="https://www.google.com/recaptcha/api.js"></script>
+            <script>
+                function onSubmit(token) {
+                    document.getElementById("registration-form").submit();
+                }
+            </script>
+            <button type="submit" id="button" data-sitekey="reCAPTCHA_site_key"
+                    data-callback='onSubmit'
+                    data-action='submit' class="button button-block">Зарегистрироваться</button>
             <script>
                 var pass = document.querySelector('#txtNewPassword');
                 var nameBlock = document.querySelector('#RegistrationName');
